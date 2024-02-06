@@ -1,0 +1,9 @@
+# gitIgnore List
+
+## Idea
+.idea
+
+## Gradle
+.gradle
+gradlew
+gradlew.bat
