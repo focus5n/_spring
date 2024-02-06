@@ -2,3 +2,6 @@
 rootProject.name = 'spring'
 
 // Module
+include 'chapter01'
+include 'chapter01'
+

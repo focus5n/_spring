@@ -9,8 +9,8 @@ public class Hello {
 
         // Step 01
         // 출력
-        // System.out.println("Hello, Spring!");
-        
+        //System.out.println("Hello, Spring!");
+
         // Step 02
         // 입력받은 내용을 출력
         /*
