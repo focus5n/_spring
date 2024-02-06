@@ -7,3 +7,9 @@
 .gradle
 gradlew
 gradlew.bat
+
+## Package
+*.jar
+
+## Generated
+*.class
