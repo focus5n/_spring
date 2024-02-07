@@ -1,5 +1,5 @@
 package message;
 
 public interface MessageProvider {
-    String getMessage();
+    String getMessage(String message);
 }

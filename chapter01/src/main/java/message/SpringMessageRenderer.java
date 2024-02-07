@@ -5,9 +5,9 @@ public class SpringMessageRenderer implements MessageRenderer {
     private MessageProvider messageProvider;
 
     @Override
-    public void render() {
+    public void render(String message) {
         if (messageProvider != null) {
-            System.out.println(messageProvider.getMessage());
+            System.out.println(messageProvider.getMessage(message));
         } else {
             throw new RuntimeException("Set the message provider.");
         }
