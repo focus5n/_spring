@@ -1,10 +1,6 @@
-import factory.SpringMessageFactory;
-import message.MessageProvider;
 import message.MessageRenderer;
-import message.SpringMessageProvider;
-import message.SpringMessageRenderer;
-
-import javax.swing.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Hello {
 
@@ -36,10 +32,22 @@ public class Hello {
         
         // Step 04
         // 설정파일에서 구현 클래스 이름을 읽어 인스턴트를 생성
+        /*
         MessageRenderer renderer = SpringMessageFactory.getInstance().getMessageRenderer();
         MessageProvider provider = SpringMessageFactory.getInstance().getMessageProvider();
 
         renderer.setMessageProvider(provider);
         renderer.render("Message from property file.");
+         */
+
+        // Step 05
+        // 컴포넌트 접착코드 제거 및 구현체 인스턴스를 스프링이 알아서 공급하도록 설정
+        String springContextProperty = "spring/springContext.xml";
+        String rendererName = "renderer";
+
+        ApplicationContext context = new ClassPathXmlApplicationContext(springContextProperty);
+        MessageRenderer renderer = context.getBean(rendererName, MessageRenderer.class);
+
+        renderer.render("Step 05 : Get Instance By Spring Context");
     }
 }

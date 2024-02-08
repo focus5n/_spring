@@ -20,7 +20,7 @@ public class SpringMessageFactory {
         propeties = new Properties();
 
         // 이름
-        String propertyNameWithSlash = "/springMessage.properties";
+        String propertyNameWithSlash = "/spring/springMessage.properties";
         String rendererClassName = "renderer.class";
         String providerClassName = "provider.class";
 
