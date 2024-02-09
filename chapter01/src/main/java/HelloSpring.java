@@ -1,8 +1,10 @@
+import configuration.SpringConfiguration;
 import message.MessageRenderer;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Hello {
+public class HelloSpring {
 
     public static void main(String[] args) {
 
@@ -42,6 +44,7 @@ public class Hello {
 
         // Step 05
         // 컴포넌트 접착코드 제거 및 구현체 인스턴스를 스프링이 알아서 공급하도록 설정
+        /*
         String springContextProperty = "spring/springContext.xml";
         String rendererName = "renderer";
 
@@ -49,5 +52,15 @@ public class Hello {
         MessageRenderer renderer = context.getBean(rendererName, MessageRenderer.class);
 
         renderer.render("Step 05 : Get Instance By Spring Context");
+         */
+        
+        // Step 06
+        // XML 설정파일 대신 Annotation 활용하여 설정
+        String rendererName = "renderer";
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfiguration.class);
+        MessageRenderer renderer = context.getBean(rendererName, MessageRenderer.class);
+
+        renderer.render("Step 06 : Annotation Configuration.");
     }
 }
