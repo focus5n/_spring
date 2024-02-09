@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- xsi : XML 문서가 특정 Schema 규칙을 준수하는지 확인 -->
+<!-- schemaLocation : schema/beans 네임스페이스 식별
+                      schema/beans/spring-beans.xms 네임스페이스와 관련된 스키마 파일의 위치 지정 -->
+<!-- spring-beans.xsd 스키마 파일에 명시된 규칙을 준수하는지 확인하는지 검증 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    &lt;!&ndash; id : 빈 식별자 &ndash;&gt;-->
+<!--    <bean id="provider"-->
+<!--          class="message.SpringMessageProvider">-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash; p : 특정 빈에 대한 의존성이 있음을 알림 &ndash;&gt;-->
+<!--    <bean id="renderer"-->
+<!--          class="message.SpringMessageRenderer"-->
+<!--          p:messageProvider-ref="provider">-->
+<!--    </bean>-->
+</beans>
