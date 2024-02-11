@@ -2,6 +2,7 @@
 
 ## Idea
 .idea
+*.iml
 
 ## Gradle
 .gradle
