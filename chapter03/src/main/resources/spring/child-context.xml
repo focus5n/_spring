@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<beans xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="song01"
+          class="hierarchical.SongImpl"
+          p:title-ref="parentTitle" />
+
+    <bean id="song02"
+          class="hierarchical.SongImpl"
+          p:title-ref="childTitle" />
+
+    <bean id="song03"
+          class="hierarchical.SongImpl">
+        <property name="title">
+            <ref parent="childTitle" />
+        </property>
+    </bean>
+
+    <bean id="childTitle" class="java.lang.String" c:_0="해당 값이 없습니다." />
+
+</beans>
