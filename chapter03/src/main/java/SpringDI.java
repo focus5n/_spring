@@ -1,3 +1,4 @@
+import injection.InjectReference;
 import injection.InjectSpEL;
 import injection.Oracle;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -44,6 +45,7 @@ public class SpringDI {
         // 메서드 주입
         
         // SpEL 사용하여 값 주입하기
+        /*
         String contextResourceLocation = "classpath:spring/app-context.xml";
         String beanName = "injectSpEL";
 
@@ -57,6 +59,20 @@ public class SpringDI {
 
         InjectSpEL spEL = (InjectSpEL) context.getBean(beanName);
         System.out.println(spEL);
+
+        context.close();
+         */
+
+        // 빈을 주입받을 수 있도록 수정자를 노출
+        String contextResourceLocation = "classpath:spring/app-context.xml";
+        String beanName = "injectReference";
+
+        GenericXmlApplicationContext context = new GenericXmlApplicationContext();
+        context.load(contextResourceLocation);
+        context.refresh();
+
+        InjectReference reference = (InjectReference) context.getBean(beanName);
+        System.out.println(reference);
 
         context.close();
     }

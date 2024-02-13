@@ -1,6 +1,9 @@
 package injection;
 
+import org.springframework.stereotype.Service;
+
 public class InjectSpEL {
+
     private String name;
     private int age;
     private float height;

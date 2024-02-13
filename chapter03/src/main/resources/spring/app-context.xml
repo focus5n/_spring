@@ -13,9 +13,16 @@
     <bean id="injectSpEL"
           class="injection.InjectSpEL"
           p:name="#{injectConfig.name}"
-          p:age="#{injectConfig.age}"
-          p:height="#{injectConfig.height}"
-          p:programmer="#{injectConfig.programmer}"
-          p:ageInSeconds="#{injectConfig.ageInSeconds}" />
+          p:age="#{injectConfig.age}" />
+
+    <bean id="oracle"
+          class="injection.BookwormOracle" />
+
+    <bean id="injectReference"
+          class="injection.InjectReference">
+        <property name="oracle">
+            <ref bean="oracle" />
+        </property>
+    </bean>
 
 </beans>
