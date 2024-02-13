@@ -15,13 +15,13 @@
           p:name="#{injectConfig.name}"
           p:age="#{injectConfig.age}" />
 
-    <bean id="oracle"
+    <bean id="oracle" name="wiseWorm"
           class="injection.BookwormOracle" />
 
     <bean id="injectReference"
           class="injection.InjectReference">
         <property name="oracle">
-            <ref bean="oracle" />
+            <ref bean="wiseWorm" />
         </property>
     </bean>
 
