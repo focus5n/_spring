@@ -25,4 +25,46 @@
         </property>
     </bean>
 
+    <bean id="lyricHolder" class="injection.LyricHolder"/>
+
+    <bean id="injectCollection" class="injection.CollectionInjection">
+        <property name="map">
+            <map>
+                <entry key="someValue" value="It's a Friday, we finally made it"/>
+                <entry key="someBean" value-ref="lyricHolder"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="firstName">John</prop>
+                <prop key="secondName">Mayer</prop>
+            </props>
+        </property>
+        <property name="set">
+            <set>
+                <value>I can't believe I get to see your face</value>
+                <ref bean="lyricHolder"/>
+            </set>
+        </property>
+        <property name="list">
+            <list>
+                <value>You've been working and I've been waiting</value>
+                <ref bean="lyricHolder"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="singer"
+          class="methodInjection.LyricSinger"
+          scope="prototype" />
+
+    <bean id="abstractLookupBean"
+          class="methodInjection.AbstractLookupDemoBean">
+        <lookup-method name="getMySinger" bean="singer" />
+    </bean>
+
+    <bean id="lookupDemoBean"
+          class="methodInjection.LookupDemoBean">
+        <property name="mySinger" ref="singer" />
+    </bean>
 </beans>
