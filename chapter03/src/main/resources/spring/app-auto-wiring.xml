@@ -7,7 +7,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="fooOne" class="autoWiring.Foo" />
+    <bean id="fooOne" class="autoWiring.FooImpl01" />
+    <bean id="fooTwo" class="autoWiring.FooImpl02" />
     <bean id="barOne" class="autoWiring.Bar" />
 
     <bean id="targetByName"
