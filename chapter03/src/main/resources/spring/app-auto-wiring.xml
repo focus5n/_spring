@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fooOne" class="autoWiring.Foo" />
+    <bean id="barOne" class="autoWiring.Bar" />
+
+    <bean id="targetByName"
+          autowire="byName"
+          class="autoWiring.Target"
+          lazy-init="true" />
+
+    <bean id="targetByType"
+          autowire="byType"
+          class="autoWiring.Target"
+          lazy-init="true" />
+
+    <bean id="targetByConstructor"
+          autowire="constructor"
+          class="autoWiring.Target"
+          lazy-init="true" />
+
+    <bean id="targetByDefault"
+          autowire="default"
+          class="autoWiring.Target"
+          lazy-init="true" />
+
+    <bean id="targetByNo"
+          autowire="no"
+          class="autoWiring.Target"
+          lazy-init="true" />
+
+</beans>
