@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+    <context:annotation-config/>
+
+    <bean id="jsr-singer01"
+          class="C04_03_receiving_notification.JSR_250.JSR_Singer"
+          p:name="Hans Mayor" p:age="32" />
+
+    <bean id="jsr-singer02"
+          class="C04_03_receiving_notification.JSR_250.JSR_Singer"
+          p:age="32" />
+
+    <bean id="jsr-singer03"
+          class="C04_03_receiving_notification.JSR_250.JSR_Singer"
+          p:name="Jin Mayor"/>
+
+</beans>
