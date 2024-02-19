@@ -1,4 +1,4 @@
-package C04_03_receiving_notification.callback_method;
+package C04_03_receiving_notification.callbackMethod;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 

@@ -1,6 +1,5 @@
-package C04_03_receiving_notification.callback_method;
+package C04_03_receiving_notification.callbackMethod;
 
-import lombok.Setter;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
 

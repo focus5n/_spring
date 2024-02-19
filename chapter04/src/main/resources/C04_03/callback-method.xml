@@ -9,17 +9,17 @@
        default-lazy-init="true">
 
     <bean id="callback-singer01"
-          class="C04_03_receiving_notification.callback_method.CallbackSinger"
+          class="C04_03_receiving_notification.callbackMethod.CallbackSinger"
           init-method="init"
           p:name="Hans Mayor" p:age="32" />
 
     <bean id="callback-singer02"
-          class="C04_03_receiving_notification.callback_method.CallbackSinger"
+          class="C04_03_receiving_notification.callbackMethod.CallbackSinger"
           init-method="init"
           p:age="32" />
 
     <bean id="callback-singer03"
-          class="C04_03_receiving_notification.callback_method.CallbackSinger"
+          class="C04_03_receiving_notification.callbackMethod.CallbackSinger"
           init-method="init"
           p:name="Jin Mayor"/>
 
