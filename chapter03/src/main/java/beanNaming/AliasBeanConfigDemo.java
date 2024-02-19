@@ -11,14 +11,14 @@ import java.util.Map;
 
 public class AliasBeanConfigDemo {
 
-    @Configuration
-    public static class AliasBeanConfig {
-
-        @Bean(name = {"Hans Mayor", "Mayor", "Hans", "June"})
-        public Singer singer() {
-            return new LyricSinger();
-        }
-    }
+//    @Configuration
+//    public static class AliasBeanConfig {
+//
+//        @Bean(name = {"Hans Mayor", "Mayor", "Hans", "June"})
+//        public Singer singer() {
+//            return new LyricSinger();
+//        }
+//    }
 
     public static void main(String[] args) {
 
