@@ -17,7 +17,7 @@ dependencies {
     compileOnly group: 'javax', name: 'javaee-api', version: '8.0.1'
 
     // Lombok
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
 
     // Test
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
