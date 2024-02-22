@@ -1,7 +1,9 @@
 package C04_07_property_editor.custom;
 
+import org.springframework.aop.framework.autoproxy.InfrastructureAdvisorAutoProxyCreator;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.core.InfrastructureProxy;
 
 public class CustomEditorExample {
 
