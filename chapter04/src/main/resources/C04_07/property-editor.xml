@@ -9,7 +9,7 @@
                            http://www.springframework.org/schema/util/spring-util.xsd">
 
     <util:list id="propertyEditorRegistrarsList">
-        <bean class="C04_07_property_editor.CustomPropertyEditorRegistrar" />
+        <bean class="C04_07_property_editor.simple.CustomPropertyEditorRegistrar" />
     </util:list>
 
     <util:list id="stringList">
@@ -22,7 +22,7 @@
           p:propertyEditorRegistrars-ref="propertyEditorRegistrarsList" />
 
     <bean id="property-bean-01"
-          class="C04_07_property_editor.SpringPropertyEditor"
+          class="C04_07_property_editor.simple.SpringPropertyEditor"
           p:character="A"
           p:bytes="John Mayer"
           p:tmpClass="java.lang.String"

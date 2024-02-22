@@ -1,4 +1,4 @@
-package C04_07_property_editor;
+package C04_07_property_editor.simple;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
