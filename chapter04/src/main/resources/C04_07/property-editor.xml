@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list id="propertyEditorRegistrarsList">
+        <bean class="C04_07_property_editor.CustomPropertyEditorRegistrar" />
+    </util:list>
+
+    <util:list id="stringList">
+        <value>String member 01</value>
+        <value>String member 02</value>
+    </util:list>
+
+    <bean id="customEditorConfigurer"
+          class="org.springframework.beans.factory.config.CustomEditorConfigurer"
+          p:propertyEditorRegistrars-ref="propertyEditorRegistrarsList" />
+
+    <bean id="property-bean-01"
+          class="C04_07_property_editor.SpringPropertyEditor"
+          p:character="A"
+          p:bytes="John Mayer"
+          p:tmpClass="java.lang.String"
+          p:tmpBoolean="true"
+          p:stringList-ref="stringList"
+          p:inputStream="test.txt"
+          p:tmpFloat="123.45678"
+          p:date="2019/03/23"
+          p:file="#{systemProperties['java.io.tmpdir']}#{systemProperties['file.separator']}test.txt"
+          p:locale="ko_KR"
+          p:pattern="a*b"
+          p:properties="name=Chris age=32"
+          p:tmpString="   String need trimming   "
+          p:url="https://spring.io/"
+    />
+
+
+</beans>
