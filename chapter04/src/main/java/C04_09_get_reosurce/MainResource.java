@@ -35,7 +35,8 @@ public class MainResource {
 
     private static void displayInfo(Resource resource) throws Exception {
         System.out.println(resource.getClass());
-        System.out.println(resource.getURL().getContent());
+//        System.out.println(resource.getURL().getContent());
+        System.out.println(resource.getInputStream());
         System.out.println("");
     }
 }
