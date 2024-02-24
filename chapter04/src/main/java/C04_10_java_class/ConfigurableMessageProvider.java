@@ -1,12 +1,16 @@
 package C04_10_java_class;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+@Service("provider")
 public class ConfigurableMessageProvider implements MessageProvider {
-    private String message = "Default Message";
+    private String message;
 
     public ConfigurableMessageProvider() {
     }
 
-    public ConfigurableMessageProvider(String message) {
+    public ConfigurableMessageProvider(@Value("정상적으로 작동함?")String message) {
         this.message = message;
     }
 
