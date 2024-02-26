@@ -14,9 +14,13 @@ repositories {
 }
 
 ext {
-    bootVersion = '2.1.6.RELEASE'
+    bootVersion = '3.2.3'
+    bootWebVersion = '3.2.3'
+    bootActuatorVersion = '3.2.3'
 }
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter:$bootVersion"
+    implementation "org.springframework.boot:spring-boot-starter-web:$bootWebVersion"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:$bootActuatorVersion"
 }

@@ -1,4 +1,4 @@
-package C04_15_springboot;
+package C04_15_springboot.default_springboot;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
