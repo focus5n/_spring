@@ -5,4 +5,5 @@ rootProject.name = 'spring'
 include 'chapter02'
 include 'chapter03'
 include 'chapter04'
+include 'chapter04_springboot'
 
